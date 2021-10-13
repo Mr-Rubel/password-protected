@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected</title>
+    <script type="text/javascript">
+    function detect_pwd(){
+            var userPassword = document.querySelector(".myText");
+            var userPasswordText = userPassword.value;
+            var adminPassword = "mijan";
+            if(userPasswordText == adminPassword){
+                return true;
+            }
+            else{
+                alert('দুঃখিত আপনি ভুল পাসওয়ার্ড দিয়েছেন, আবার চেষ্টা করুন।');
+                return false;
+            };
+    };
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1 style="color: red;">পেজটি লক করা আছে, সঠিক পাসওয়ার্ড দিয়ে লক খুলুন।</h1>
+        <label for="pwd">পাসওয়ার্ড দিন</label>
+        <input type="password" placeholder="পাসওয়ার্ড হলো= mijan" id="pwd" class="myText"><br><br>
+        <a style="text-decoration: none;padding: 10px;background-color: red;color: white; border-radius: 10px;" href="protected.html" onclick="return detect_pwd();">এখানে ক্লিক করুন</a>
+    </div>
+</body>
+</html>
